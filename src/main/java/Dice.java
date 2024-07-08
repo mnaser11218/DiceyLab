@@ -11,14 +11,14 @@ private static int diceRollNum = 0;
 
     }
 
-    public static void main(String[] args){
-
-        Dice dice1 = new Dice();
-        Dice dice2 = new Dice();
-
-        System.out.println(dice1.tossAndSum());
-
-    }
+//    public static void main(String[] args){
+//
+//        Dice dice1 = new Dice();
+//        Dice dice2 = new Dice();
+//
+//        System.out.println(dice1.tossAndSum());
+//
+//    }
 
    // public Dice() {
     //}
