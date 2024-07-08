@@ -16,7 +16,7 @@ private String finalresultString = "";
     };
 
     public static void main(String[] args){
-        Simulation simulation = new Simulation(8, 100000);
+        Simulation simulation = new Simulation(2, 1000);
         System.out.println(simulation.runSimulation());
         System.out.println(simulation.printResults());
 
@@ -50,9 +50,9 @@ private String finalresultString = "";
                     "*** \n";
         for(int i =2; i< this.bin.length; i++){
             //System.out.println(this.bin[i]);
-            double percentageNum = (double) (numberOfTosses / bin[i]);
-            percentageNum = percentageNum /1000;
-            this.finalresultString += (i +  ":    " + this.bin[i] + ": " + String.format("%.3f", percentageNum) +  "** \n");
+            double percentageNum =  (bin[i] / (double) numberOfTosses );
+           // percentageNum = percentageNum /1000;
+            this.finalresultString += (i +  ":    " + this.bin[i] + ": " + String.format("%.2f", percentageNum) +  " *".repeat((int) (percentageNum * 100)) + "\n");
         }
         return this.finalresultString;
     }
